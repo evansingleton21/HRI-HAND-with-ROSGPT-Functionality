@@ -1,0 +1,201 @@
+# This file contains the configuration for the position controllers of the HRI hand.
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 20
+
+pris_thumb_jo_position_controller:
+  type: position_controllers/JointGroupPositionController
+  joints:
+   - pris_thumb_jo_joint
+   - thumb_jo_joint
+
+pris_thumb_DIP_position_controller:
+  type: position_controllers/JointGroupPositionController
+  joints: 
+   - pris_thumb_DIP_joint
+   - thumb_MCP_joint
+   - thumb_DIP_joint 
+
+pris_index_position_controller:
+  type: position_controllers/JointGroupPositionController
+  joints: 
+   - pris_index_joint
+   - index_MCP_joint 
+   - index_PIP_joint
+   - index_DIP_joint
+  
+pris_middle_position_controller:
+  type: position_controllers/JointGroupPositionController
+  joints: 
+   - pris_middle_joint
+   - middle_MCP_joint 
+   - middle_PIP_joint
+   - middle_DIP_joint
+  
+pris_ring_position_controller:
+  type: position_controllers/JointGroupPositionController
+  joints: 
+   - pris_ring_joint
+   - ring_MCP_joint 
+   - ring_PIP_joint
+   - ring_DIP_joint
+  
+pris_little_position_controller:
+  type: position_controllers/JointGroupPositionController
+  joints: 
+   - pris_little_joint
+   - little_MCP_joint 
+   - little_PIP_joint
+   - little_DIP_joint
+
+gazebo_ros_control:
+  pid_gains:
+    pris_thumb_jo_joint:
+      p: 2.0
+      i: 0.00
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    pris_thumb_DIP_joint:
+      p: 2.0
+      i: 0.00
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    pris_index_joint:
+      p: 2.0
+      i: 0.00
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    pris_middle_joint:
+      p: 2.0
+      i: 0.00
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    pris_ring_joint:
+      p: 2.0
+      i: 0.00
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    pris_little_joint:
+      p: 2.0
+      i: 0.00
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    little_DIP_joint:
+      p: 2.0
+      i: 0.00
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    little_PIP_joint:
+      p: 2.0
+      i: 0.1
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    little_MCP_joint:
+      p: 2.0
+      i: 0.1
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    ring_DIP_joint:
+      p: 2.0
+      i: 0.1
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    ring_PIP_joint:
+      p: 2.0
+      i: 0.1
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    ring_MCP_joint:
+      p: 2.0
+      i: 0.1
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    middle_DIP_joint:
+      p: 2.0
+      i: 0.1
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    middle_PIP_joint:
+      p: 2.0
+      i: 0.1
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    middle_MCP_joint:
+      p: 2.0
+      i: 0.1
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    index_DIP_joint:
+      p: 2.0
+      i: 0.1
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    index_PIP_joint:
+      p: 2.0
+      i: 0.1
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    index_MCP_joint:
+      p: 2.0
+      i: 0.1
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    thumb_DIP_joint:
+      p: 2.0
+      i: 0.1
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    thumb_MCP_joint:
+      p: 2.0
+      i: 0.1
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+    thumb_jo_joint:
+      p: 2.0
+      i: 0.1
+      d: 0.01
+      i_clamp_max: 1.0
+      i_clamp_min: -1.0
+      antiwindup: true
+
+

@@ -1,0 +1,15 @@
+<launch>
+   <node 
+      name="rosgpt_node" 
+      pkg="rosgpt" 
+      type="rosgpt_node.py" 
+      output="screen"/>
+    
+    <node 
+      name="rosgpt_input_scan_node" 
+      pkg="rosgpt" 
+      type="rosgpt_input_scan_node.py" 
+      output="screen"/>
+
+
+</launch>

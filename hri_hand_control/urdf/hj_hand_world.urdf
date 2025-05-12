@@ -1,0 +1,1339 @@
+<?xml version="1.0" ?>
+<robot name="hj_hand_world">
+  <link name="world"/>
+  <transmission name="pris_thumb_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="pris_thumb_jo_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="pris_thumb_jo_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="pris_thumb_DIP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="pris_thumb_DIP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="pris_thumb_DIP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="pris_index_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="pris_index_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="pris_index_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="pris_middle_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="pris_middle_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="pris_middle_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="pris_ring_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="pris_ring_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="pris_ring_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="pris_little_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="pris_little_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="pris_little_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <!-- fingers -->
+  <transmission name="thumb_jo_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="thumb_jo_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="thumb_jo_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="thumb_MCP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="thumb_MCP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="thumb_MCP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="thumb_DIP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="thumb_DIP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="thumb_DIP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="index_MCP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="index_MCP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="index_MCP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="index_PIP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="index_PIP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="index_PIP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="index_DIP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="index_DIP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="index_DIP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="middle_MCP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="middle_MCP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="middle_MCP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="middle_PIP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="middle_PIP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="middle_PIP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="middle_DIP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="middle_DIP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="middle_DIP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="ring_MCP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ring_MCP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="ring_MCP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="ring_PIP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ring_PIP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="ring_PIP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="ring_DIP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="ring_DIP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="ring_DIP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="little_MCP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="little_MCP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="little_MCP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="little_PIP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="little_PIP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="little_PIP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="little_DIP_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="little_DIP_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="little_DIP_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <gazebo reference="pris_thumb_jo">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="pris_thumb_DIP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="pris_index">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="pris_middle">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="pris_ring">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="pris_little">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <!-- fingers-->
+  <gazebo reference="thumb_joint">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="thumb_MCP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="thumb_DIP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="index_MCP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="index_PIP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="index_DIP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="middle_MCP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="middle_PIP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="middle_DIP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="ring_MCP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="ring_PIP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="ring_DIP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="little_MCP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="little_PIP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="little_DIP">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+  <!--joint origin-->
+  <!--****************WRIST PLATE************************* -->
+  <link name="wrist_plate">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_hand_wrist_part.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="1.57 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      <material name="white">
+        <color rgba="0.85 0.85 0.85 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_hand_wrist_part.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="1.57 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+  </link>
+  <joint name="wrist_plate_joint" type="fixed">
+    <origin rpy="3.1416 3.141592653589793 0" xyz="0.0 0.0 0.1"/>
+    <parent link="world"/>
+    <child link="wrist_plate"/>
+    <limit effort="0.0" lower="-0.0001" upper="0.0" velocity="0.0"/>
+  </joint>
+  <link name="hand_palm">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_palm.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="3.14 4.71 0.0" xyz="0.0 0.0162 0.03"/>
+      <material name="lightgrey">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_palm.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="3.14 4.71 0.0" xyz="0.0 0.0162 0.03"/>
+    </collision>
+    <inertial>
+      <mass value="0.09"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="hand_wrist_plate_to_hand_palm" type="fixed">
+    <parent link="wrist_plate"/>
+    <child link="hand_palm"/>
+    <origin xyz="0 0 .026"/>
+  </joint>
+  <!--****************4 fingers*************************-->
+  <link name="knuckle_index">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_Finger_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 -3.14" xyz="0.0 0.0 0.0"/>
+      <material name="white">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_Finger_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 -3.14" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="knuckle_index_joint" type="fixed">
+    <parent link="hand_palm"/>
+    <child link="knuckle_index"/>
+    <origin xyz="-0.0313                          0.016                         0.0295"/>
+  </joint>
+  <link name="knuckle_middle">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_Finger_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 -3.14" xyz="0.0 0.0 0.0"/>
+      <material name="white">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_Finger_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 -3.14" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="knuckle_middle_joint" type="fixed">
+    <parent link="hand_palm"/>
+    <child link="knuckle_middle"/>
+    <origin xyz="-0.0103                                0.016                                0.0295"/>
+  </joint>
+  <link name="knuckle_ring">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_Finger_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 -3.14" xyz="0.0 0.0 0.0"/>
+      <material name="white">
+                  </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_Finger_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 -3.14" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="knuckle_ring_joint" type="fixed">
+    <parent link="hand_palm"/>
+    <child link="knuckle_ring"/>
+    <origin xyz="0.010700000000000001                                      0.016                                      0.0295"/>
+  </joint>
+  <link name="knuckle_little">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_Finger_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 -3.14" xyz="0.0 0.0 0.0"/>
+      <material name="white">
+                  </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_Finger_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 -3.14" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="knuckle_little_joint" type="fixed">
+    <parent link="hand_palm"/>
+    <child link="knuckle_little"/>
+    <origin xyz="0.0317                                0.016                                0.0295"/>
+  </joint>
+  <link name="knuckle_thumb">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_Thumb_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 0.0 -3.14" xyz="0.0 0.0 0.0"/>
+      <material name="white">
+                  </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_Thumb_base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 0.0 -3.14" xyz="0.0 0.0 0.0"/>
+    </collision>
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="knuckle_thumb_joint" type="fixed">
+    <parent link="hand_palm"/>
+    <child link="knuckle_thumb"/>
+    <origin xyz="0.0345                             0.0162                             0.0186"/>
+  </joint>
+  <!-- Thumb finger -->
+  <link name="thumb_joint">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_Thumb_joint.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 0 3.14" xyz="0.0 0 -0.005"/>
+      <material name="white">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_Thumb_joint.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 0 3.14" xyz="0.0 0 -0.005"/>
+    </collision>
+    <inertial>
+      <mass value="0.015"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="thumb_jo_joint" type="revolute">
+    <axis xyz="0 0 -1"/>
+    <!--z axis rotate -->
+    <limit effort="10.0" lower="-0.0001" upper="1.8" velocity="0.5"/>
+    <parent link="knuckle_thumb"/>
+    <child link="thumb_joint"/>
+    <origin rpy="0.0 0.0 -0.6021" xyz="-0.0558                          -0.00675                          -0.0"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_thumb_jo_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="thumb_MCP">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_MCP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="-1.57 0 3.14" xyz="0.00955 0.0 0.00415"/>
+      <material name="white">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_MCP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="-1.57 0 3.14" xyz="0.00955 0.0 0.00415"/>
+    </collision>
+    <inertial>
+      <mass value="0.0125"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="thumb_MCP_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit effort="10.0" lower="-0.0001" upper="1.0" velocity="0.5"/>
+    <parent link="thumb_joint"/>
+    <child link="thumb_MCP"/>
+    <origin rpy="0.0 0.4538 0.0" xyz="-0.031 -0.0055 -0.0"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_thumb_DIP_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="thumb_DIP">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_DIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="-1.57 0 3.14" xyz="0.00255 0.0 0.00726"/>
+      <material name="lightyellow">
+        <color rgba="1.0 1.0 0.3 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_DIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="-1.57 0 3.14" xyz="0.00255 0.0 0.00726"/>
+    </collision>
+    <inertial>
+      <mass value="0.0025"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="thumb_DIP_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit effort="10.0" lower="-0.0001" upper="0.8" velocity="0.5"/>
+    <parent link="thumb_MCP"/>
+    <child link="thumb_DIP"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.0298                          -0.0                          -0.0042"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_thumb_DIP_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="ee_thumb_link">
+    <collision>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+  </link>
+  <joint name="ee_th_joint" type="fixed">
+    <parent link="thumb_DIP"/>
+    <child link="ee_thumb_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="-0.025725 0.0 0.0 "/>
+  </joint>
+  <!-- Thumb finger end -->
+  <!-- Thumb motor -->
+  <link name="motor_thumb_jo">
+    <visual>
+      <geometry>
+        <box size="0.016 0.035 0.02"/>
+      </geometry>
+      <origin xyz="0 .02 0"/>
+      <material name="black">
+        <color rgba="0.25 0.25 0.25 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.016 0.035 0.02"/>
+      </geometry>
+      <origin xyz="0 .02 0"/>
+      <material name="black">
+        <color rgba="0.25 0.25 0.25 1"/>
+      </material>
+    </collision>
+    <!--collision>
+                  <geometry>
+                  <box size="${motor_x} ${motor_y} ${motor_z}"/>
+                  </geometry>
+                  <origin xyz="0 .02 0"/>
+            </collision-->
+    <inertial>
+      <mass value="0.015"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="motor_thumb_jo_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="knuckle_thumb"/>
+    <child link="motor_thumb_jo"/>
+    <origin rpy="1.57 -1.57 0" xyz="-0.008 -0.015 -0.0"/>
+  </joint>
+  <link name="pris_thumb_jo">
+    <visual>
+      <geometry>
+        <box size="0.005 0.005 0.025"/>
+      </geometry>
+      <origin xyz="0 0 0"/>
+      <material name="black">
+                  </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.005 0.005 0.025"/>
+      </geometry>
+      <origin xyz="0 0 0"/>
+      <material name="black">
+                  </material>
+    </collision>
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="pris_thumb_jo_joint" type="prismatic">
+    <axis xyz="0 0 -1"/>
+    <limit effort="10.0" lower="-0.0001" upper="0.01" velocity="0.5"/>
+    <parent link="motor_thumb_jo"/>
+    <child link="pris_thumb_jo"/>
+    <!--origin xyz="0 .03 0" rpy = "1.57 0 0"/-->
+    <origin rpy="1.57 0 0" xyz="0.0 0.03 0.0053"/>
+  </joint>
+  <link name="motor_thumb_DIP">
+    <visual>
+      <geometry>
+        <box size="0.016 0.035 0.02"/>
+      </geometry>
+      <origin xyz="0 .02 0"/>
+      <material name="black">
+        <color rgba="0.25 0.25 0.25 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.016 0.035 0.02"/>
+      </geometry>
+      <origin xyz="0 .02 0"/>
+      <material name="black">
+        <color rgba="0.25 0.25 0.25 1"/>
+      </material>
+    </collision>
+    <!--collision>
+                  <geometry>
+                  <box size="${motor_x} ${motor_y} ${motor_z}"/>
+                  </geometry>
+                  <origin xyz="0 .02 0"/>
+            </collision-->
+    <inertial>
+      <mass value="0.0025"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="motor_thumb_DIP_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="thumb_joint"/>
+    <child link="motor_thumb_DIP"/>
+    <origin rpy="3.14 3.14 -1.57" xyz="0.0125 -0.0055 -0.015"/>
+  </joint>
+  <link name="pris_thumb_DIP">
+    <visual>
+      <geometry>
+        <box size="0.005 0.005 0.025"/>
+      </geometry>
+      <origin xyz="0 0 0"/>
+      <material name="black">
+                  </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.005 0.005 0.025"/>
+      </geometry>
+      <origin xyz="0 0 0"/>
+      <material name="black">
+                  </material>
+    </collision>
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="pris_thumb_DIP_joint" type="prismatic">
+    <axis xyz="0 0 -1"/>
+    <limit effort="10.0" lower="-0.0001" upper="0.0103" velocity="0.5"/>
+    <parent link="motor_thumb_DIP"/>
+    <child link="pris_thumb_DIP"/>
+    <!--origin xyz="0 .03 0" rpy = "1.57 0 0"/-->
+    <origin rpy="1.57 0 0" xyz="0.0 0.03 0.0053"/>
+  </joint>
+  <!-- Thumb motor end -->
+  <!-- index -->
+  <link name="index_MCP">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_MCP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0 0.00415 -0.00955"/>
+      <material name="white">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_MCP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0 0.00415 -0.00955"/>
+    </collision>
+    <inertial>
+      <mass value="0.0125"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="index_MCP_joint" type="revolute">
+    <axis xyz="-1 0 0"/>
+    <limit effort="10.0" lower="-0.0001" upper="1.3" velocity="0.5"/>
+    <parent link="knuckle_index"/>
+    <child link="index_MCP"/>
+    <origin xyz="-0.0002                          -0.00677                          0.0538"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_index_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="index_PIP">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_PIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="-0.0002                                   0.0093                                  -0.00242"/>
+      <material name="white">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_PIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="-0.0002 0.0093 -0.00242"/>
+    </collision>
+    <inertial>
+      <mass value="0.0125"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="index_PIP_joint" type="revolute">
+    <axis xyz="-1 0 0"/>
+    <limit effort="10.0" lower="-0.0001" upper="1.0" velocity="0.5"/>
+    <parent link="index_MCP"/>
+    <child link="index_PIP"/>
+    <origin xyz="-0.0                          -0.00208                          0.02677"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_index_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="index_DIP">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_DIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0                                   0.0075                                  -0.0025"/>
+      <material name="lightyellow">
+        <color rgba="1.0 1.0 0.3 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_DIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0 0.0075 -0.0025"/>
+    </collision>
+    <inertial>
+      <mass value="0.0025"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="index_DIP_joint" type="revolute">
+    <axis xyz="-1 0 0"/>
+    <limit effort="10.0" lower="-0.0001" upper="1.0" velocity="0.5"/>
+    <parent link="index_PIP"/>
+    <child link="index_DIP"/>
+    <origin xyz="-0.0                          -0.0                          0.0233"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_index_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="ee_index_link">
+    <collision>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+  </link>
+  <joint name="ee_in_joint" type="fixed">
+    <parent link="index_DIP"/>
+    <child link="ee_index_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.025725"/>
+  </joint>
+  <!-- index END-->
+  <!-- middle -->
+  <link name="middle_MCP">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_MCP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0 0.00415 -0.00955"/>
+      <material name="white">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_MCP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0 0.00415 -0.00955"/>
+    </collision>
+    <inertial>
+      <mass value="0.0125"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="middle_MCP_joint" type="revolute">
+    <axis xyz="-1 0 0"/>
+    <limit effort="10.0" lower="-0.0001" upper="1.3" velocity="0.5"/>
+    <parent link="knuckle_middle"/>
+    <child link="middle_MCP"/>
+    <origin xyz="-0.0002                          -0.00677                          0.0538"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_middle_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="middle_PIP">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_PIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="-0.0002                                   0.0093                                  -0.00242"/>
+      <material name="white">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_PIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="-0.0002 0.0093 -0.00242"/>
+    </collision>
+    <inertial>
+      <mass value="0.0125"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="middle_PIP_joint" type="revolute">
+    <axis xyz="-1 0 0"/>
+    <limit effort="10.0" lower="-0.0001" upper="1.0" velocity="0.5"/>
+    <parent link="middle_MCP"/>
+    <child link="middle_PIP"/>
+    <origin xyz="-0.0                          -0.00208                          0.02677"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_middle_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="middle_DIP">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_DIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0                                   0.0075                                  -0.0025"/>
+      <material name="lightyellow">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_DIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0 0.0075 -0.0025"/>
+    </collision>
+    <inertial>
+      <mass value="0.0025"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="middle_DIP_joint" type="revolute">
+    <axis xyz="-1 0 0"/>
+    <limit effort="10.0" lower="-0.0001" upper="1.0" velocity="0.5"/>
+    <parent link="middle_PIP"/>
+    <child link="middle_DIP"/>
+    <origin xyz="-0.0                          -0.0                          0.0233"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_middle_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="ee_middle_link">
+    <collision>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+  </link>
+  <joint name="ee_mi_joint" type="fixed">
+    <parent link="middle_DIP"/>
+    <child link="ee_middle_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.025725"/>
+  </joint>
+  <!-- middle END-->
+  <!-- ring -->
+  <link name="ring_MCP">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_MCP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0 0.00415 -0.00955"/>
+      <material name="white">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_MCP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0 0.00415 -0.00955"/>
+    </collision>
+    <inertial>
+      <mass value="0.0125"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="ring_MCP_joint" type="revolute">
+    <axis xyz="-1 0 0"/>
+    <limit effort="10.0" lower="-0.0001" upper="1.3" velocity="0.5"/>
+    <parent link="knuckle_ring"/>
+    <child link="ring_MCP"/>
+    <origin xyz="-0.0002                          -0.00677                          0.0538"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_ring_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="ring_PIP">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_PIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="-0.0002                                   0.0093                                  -0.00242"/>
+      <material name="white">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_PIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="-0.0002 0.0093 -0.00242"/>
+    </collision>
+    <inertial>
+      <mass value="0.0125"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="ring_PIP_joint" type="revolute">
+    <axis xyz="-1 0 0"/>
+    <limit effort="10.0" lower="-0.0001" upper="1.0" velocity="0.5"/>
+    <parent link="ring_MCP"/>
+    <child link="ring_PIP"/>
+    <origin xyz="-0.0                          -0.00208                          0.02677"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_ring_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="ring_DIP">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_DIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0                                   0.0075                                  -0.0025"/>
+      <material name="lightyellow">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_DIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0 0.0075 -0.0025"/>
+    </collision>
+    <inertial>
+      <mass value="0.0025"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="ring_DIP_joint" type="revolute">
+    <axis xyz="-1 0 0"/>
+    <limit effort="10.0" lower="-0.0001" upper="1.0" velocity="0.5"/>
+    <parent link="ring_PIP"/>
+    <child link="ring_DIP"/>
+    <origin xyz="-0.0                          -0.0                          0.0233"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_ring_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="ee_ring_link">
+    <collision>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+  </link>
+  <joint name="ee_ri_joint" type="fixed">
+    <parent link="ring_DIP"/>
+    <child link="ee_ring_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.025725"/>
+  </joint>
+  <!-- ring END-->
+  <!-- little -->
+  <link name="little_MCP">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_MCP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0 0.00415 -0.00955"/>
+      <material name="white">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_MCP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0 0.00415 -0.00955"/>
+    </collision>
+    <inertial>
+      <mass value="0.0125"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="little_MCP_joint" type="revolute">
+    <axis xyz="-1 0 0"/>
+    <limit effort="10.0" lower="-0.0001" upper="1.3" velocity="0.5"/>
+    <parent link="knuckle_little"/>
+    <child link="little_MCP"/>
+    <origin xyz="-0.0002                          -0.00677                          0.0538"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_little_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="little_PIP">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_PIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="-0.0002                                   0.0093                                  -0.00242"/>
+      <material name="white">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_PIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="-0.0002 0.0093 -0.00242"/>
+    </collision>
+    <inertial>
+      <mass value="0.0125"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="little_PIP_joint" type="revolute">
+    <axis xyz="-1 0 0"/>
+    <limit effort="10.0" lower="-0.0001" upper="1.0" velocity="0.5"/>
+    <parent link="little_MCP"/>
+    <child link="little_PIP"/>
+    <origin xyz="-0.0                          -0.00208                          0.02677"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_little_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="little_DIP">
+    <visual>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_DIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0                                   0.0075                                  -0.0025"/>
+      <material name="lightyellow">
+            </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hri_hand_control/urdf/mesh/F03_AL_link_DIP.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0.0 -1.57 3.14" xyz="0.0 0.0075 -0.0025"/>
+    </collision>
+    <inertial>
+      <mass value="0.0025"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="little_DIP_joint" type="revolute">
+    <axis xyz="-1 0 0"/>
+    <limit effort="10.0" lower="-0.0001" upper="1.0" velocity="0.5"/>
+    <parent link="little_PIP"/>
+    <child link="little_DIP"/>
+    <origin xyz="-0.0                          -0.0                          0.0233"/>
+    <dynamics damping="0.00" friction="0.00"/>
+    <mimic joint="pris_little_joint" multiplier="100.00" offset="0.0"/>
+  </joint>
+  <link name="ee_little_link">
+    <collision>
+      <geometry>
+        <box size="0.0001 0.0001 0.0001"/>
+      </geometry>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+  </link>
+  <joint name="ee_li_joint" type="fixed">
+    <parent link="little_DIP"/>
+    <child link="ee_little_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.025725"/>
+  </joint>
+  <!-- little END-->
+  <!--****************MOTORS*****************-->
+  <!--motor INDEX -->
+  <link name="motor_index">
+    <visual>
+      <geometry>
+        <box size="0.016 0.035 0.02"/>
+      </geometry>
+      <origin xyz="0 .02 0"/>
+      <material name="black">
+        <color rgba="0.25 0.25 0.25 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.016 0.035 0.02"/>
+      </geometry>
+      <origin xyz="0 .02 0"/>
+      <material name="black">
+        <color rgba="0.25 0.25 0.25 1"/>
+      </material>
+    </collision>
+    <!--collision>
+                  <geometry>
+                  <box size="${motor_x} ${motor_y} ${motor_z}"/>
+                  </geometry>
+                  <origin xyz="0 .02 0"/>
+            </collision-->
+    <inertial>
+      <mass value="0.015"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="motor_index_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="knuckle_index"/>
+    <child link="motor_index"/>
+    <origin rpy="1.57 0 0" xyz="0.0 -0.0145 0.006"/>
+  </joint>
+  <link name="pris_index">
+    <visual>
+      <geometry>
+        <box size="0.005 0.005 0.025"/>
+      </geometry>
+      <origin xyz="0 0 0"/>
+      <material name="black">
+                  </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.005 0.005 0.025"/>
+      </geometry>
+      <origin xyz="0 0 0"/>
+      <material name="black">
+                  </material>
+    </collision>
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="pris_index_joint" type="prismatic">
+    <axis xyz="0 0 -1"/>
+    <limit effort="10.0" lower="-0.0001" upper="0.0103" velocity="0.5"/>
+    <parent link="motor_index"/>
+    <child link="pris_index"/>
+    <!--origin xyz="0 .03 0" rpy = "1.57 0 0"/-->
+    <origin rpy="1.57 0 0" xyz="0.0 0.03 0.0"/>
+  </joint>
+  <!--motor INDEX  end-->
+  <!--motor MIDDLE -->
+  <link name="motor_middle">
+    <visual>
+      <geometry>
+        <box size="0.016 0.035 0.02"/>
+      </geometry>
+      <origin xyz="0 .02 0"/>
+      <material name="black">
+                  </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.016 0.035 0.02"/>
+      </geometry>
+      <origin xyz="0 .02 0"/>
+      <material name="black">
+                  </material>
+    </collision>
+    <!--collision>
+                  <geometry>
+                  <box size="${motor_x} ${motor_y} ${motor_z}"/>
+                  </geometry>
+                  <origin xyz="0 .02 0"/>
+            </collision-->
+    <inertial>
+      <mass value="0.015"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="motor_middle_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="knuckle_middle"/>
+    <child link="motor_middle"/>
+    <origin rpy="1.57 0 0" xyz="0.0 -0.0145 0.006"/>
+  </joint>
+  <link name="pris_middle">
+    <visual>
+      <geometry>
+        <box size="0.005 0.005 0.025"/>
+      </geometry>
+      <origin xyz="0 0 0"/>
+      <material name="black">
+                  </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.005 0.005 0.025"/>
+      </geometry>
+      <origin xyz="0 0 0"/>
+      <material name="black">
+                  </material>
+    </collision>
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="pris_middle_joint" type="prismatic">
+    <axis xyz="0 0 -1"/>
+    <limit effort="10.0" lower="-0.0001" upper="0.0103" velocity="0.5"/>
+    <parent link="motor_middle"/>
+    <child link="pris_middle"/>
+    <!--origin xyz="0 .03 0" rpy = "1.57 0 0"/-->
+    <origin rpy="1.57 0 0" xyz="0.0 0.03 0.0"/>
+  </joint>
+  <!--motor MIDDLE  end-->
+  <!--motor RING -->
+  <link name="motor_ring">
+    <visual>
+      <geometry>
+        <box size="0.016 0.035 0.02"/>
+      </geometry>
+      <origin xyz="0 .02 0"/>
+      <material name="black">
+                  </material>
+    </visual>
+    <!--collision>
+                  <geometry>
+                  <box size="${motor_x} ${motor_y} ${motor_z}"/>
+                  </geometry>
+                  <origin xyz="0 .02 0"/>
+            </collision-->
+    <inertial>
+      <mass value="0.015"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="motor_ring_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="knuckle_ring"/>
+    <child link="motor_ring"/>
+    <origin rpy="1.57 0 0" xyz="0.0 -0.0145 0.006"/>
+  </joint>
+  <link name="pris_ring">
+    <visual>
+      <geometry>
+        <box size="0.005 0.005 0.025"/>
+      </geometry>
+      <origin xyz="0 0 0"/>
+      <material name="black">
+                  </material>
+    </visual>
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="pris_ring_joint" type="prismatic">
+    <axis xyz="0 0 -1"/>
+    <limit effort="10.0" lower="-0.0001" upper="0.0103" velocity="0.5"/>
+    <parent link="motor_ring"/>
+    <child link="pris_ring"/>
+    <!--origin xyz="0 .03 0" rpy = "1.57 0 0"/-->
+    <origin rpy="1.57 0 0" xyz="0.0 0.03 0.0"/>
+  </joint>
+  <!--motor RING  end-->
+  <!--motor LITTLE -->
+  <link name="motor_little">
+    <visual>
+      <geometry>
+        <box size="0.016 0.035 0.02"/>
+      </geometry>
+      <origin xyz="0 .02 0"/>
+      <material name="black">
+                  </material>
+    </visual>
+    <!--collision>
+                  <geometry>
+                  <box size="${motor_x} ${motor_y} ${motor_z}"/>
+                  </geometry>
+                  <origin xyz="0 .02 0"/>
+            </collision-->
+    <inertial>
+      <mass value="0.015"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="motor_little_joint" type="fixed">
+    <axis xyz="1 0 0"/>
+    <parent link="knuckle_little"/>
+    <child link="motor_little"/>
+    <origin rpy="1.57 0 0" xyz="0.0 -0.0145 0.006"/>
+  </joint>
+  <link name="pris_little">
+    <visual>
+      <geometry>
+        <box size="0.005 0.005 0.025"/>
+      </geometry>
+      <origin xyz="0 0 0"/>
+      <material name="black">
+                  </material>
+    </visual>
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="1.0e-03" ixy="0.0" ixz="0.0" iyy="1.0e-03" iyz="0.0" izz="1.0e-03"/>
+    </inertial>
+  </link>
+  <joint name="pris_little_joint" type="prismatic">
+    <axis xyz="0 0 -1"/>
+    <limit effort="10.0" lower="-0.0001" upper="0.0103" velocity="0.5"/>
+    <parent link="motor_little"/>
+    <child link="pris_little"/>
+    <!--origin xyz="0 .03 0" rpy = "1.57 0 0"/-->
+    <origin rpy="1.57 0 0" xyz="0.0 0.03 0.0"/>
+  </joint>
+  <gazebo reference="wrist_plate">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="index_DIP">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+  <gazebo reference="little_DIP">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+  <gazebo reference="middle_DIP">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+  <gazebo reference="ring_DIP">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+  <gazebo reference="thumb_DIP">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+</robot>

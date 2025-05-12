@@ -1,0 +1,24 @@
+<launch>
+  <arg
+    name="model" />
+  <param
+    name="robot_description"
+    textfile="$(find hri_hand_control)/urdf/hj_hand_world.urdf"/>
+  <node 
+    name="joint_state_publisher_gui" 
+    pkg="joint_state_publisher_gui" 
+    type="joint_state_publisher_gui" />
+  <node
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" />
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"/>
+  <node 
+    name="hri_pose_publisher" 
+    pkg="hri_hand_control" 
+    type="hri_pose_pub_node.py" 
+    output="screen"/>
+</launch>

@@ -1,0 +1,6 @@
+<launch>
+  <param name="robot_description" textfile="$(find hri_hand_control)/urdf/mimic.urdf"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node name="rviz" pkg="rviz" type="rviz" />
+</launch>
+

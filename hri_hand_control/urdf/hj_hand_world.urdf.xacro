@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="hj_hand_world">
+      <!-- 
+      Autor: Hyeonjun Park
+      2019.07.17 
+      -->
+      <link name="world" />  
+
+      <!-- Include the Xacro file -->
+      <xacro:include filename="$(find hri_hand_control)/urdf/hj_hand.urdf.xacro" />
+
+      <!-- Correctly call the Xacro macro with 'xacro:' prefix -->
+      <xacro:hj_hand parent="world">
+            <origin xyz="0.0 0.0 0.1" rpy="0 0 0"/>
+      </xacro:hj_hand>
+</robot>
+

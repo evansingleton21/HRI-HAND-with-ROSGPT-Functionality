@@ -1,0 +1,69 @@
+<launch>
+   <!-- Arguments -->
+   <arg name="rviz" default="true"/>
+   <arg name="gui" default="true"/>
+   <arg name="use_sim_time" default="true"/>
+   <arg name="world" default="$(find gazebo_ros)/worlds/empty.world"/>
+   <arg name="model" default="$(find hri_hand_control)/urdf/hj_hand_world.urdf"/>
+   
+   <rosparam file="$(find hri_hand_control)/config/hand_position_controllers.yaml" command="load"/>
+   
+   <!-- Start the controller manager -->
+   <node 
+      name="controller_manager" 
+      pkg="controller_manager" 
+      type="controller_manager" 
+      respawn="false" 
+      output="screen">
+   </node>
+
+   <!-- Start Gazebo -->
+   <include file="$(find gazebo_ros)/launch/empty_world.launch">
+      <arg name="world_name" value="$(arg world)"/>
+      <arg name="gui" value="$(arg gui)"/>
+      <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+   </include>
+
+   <!-- Robot State Publisher -->
+   <node
+      name="robot_state_publisher"
+      pkg="robot_state_publisher"
+      type="robot_state_publisher" />
+
+   <!-- Load URDF and Publish robot_description -->
+   <param name="robot_description" command="cat $(arg model)"/>
+
+   <node
+      name="rviz"
+      pkg="rviz"
+      type="rviz" />
+
+   <!-- Spawn Robot in Gazebo -->
+   <node 
+      name="spawn_urdf" 
+      pkg="gazebo_ros" 
+      type="spawn_model" 
+      output="screen"
+      args="-param robot_description -urdf -model hj_hand"/> 
+
+   <!-- Load Controllers -->
+   <node 
+      name="controller_spawner" 
+      pkg="controller_manager" 
+      type="spawner"
+      args="pris_thumb_jo_position_controller 
+            pris_thumb_DIP_position_controller 
+            pris_index_position_controller 
+            pris_middle_position_controller 
+            pris_ring_position_controller 
+            pris_little_position_controller
+            joint_state_controller"
+      output="screen"/>
+
+   <!-- Pose Publisher -->
+   <node 
+      name="hand_service" 
+      pkg="hri_hand_control" 
+      type="hand_service.py" 
+      output="screen"/>
+</launch>
